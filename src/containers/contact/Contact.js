@@ -10,7 +10,7 @@ import StyleContext from "../../contexts/StyleContext";
 export default function Contact() {
   const {isDark} = useContext(StyleContext);
 
-  if(!contactInfo.display) {
+  if (!contactInfo.display) {
     return null;
   }
 

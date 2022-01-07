@@ -1,15 +1,12 @@
-import React, {useState, useEffect, useContext} from "react";
-import "./Blog.scss";
+import React, { useContext, useState } from "react";
+import { Fade } from "react-reveal";
 import BlogCard from "../../components/blogCard/BlogCard";
-import {blogSection} from "../../portfolio";
-import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import { blogSection } from "../../portfolio";
+import "./Blog.scss";
 export default function Blogs() {
   const {isDark} = useContext(StyleContext);
-  const [mediumBlogs, setMediumBlogs] = useState([]);
-  function setMediumBlogsFunction(array) {
-    setMediumBlogs(array);
-  }
+  const [mediumBlogs] = useState([]);
   //Medium API returns blogs' content in HTML format. Below function extracts blogs' text content within paragraph tags
   function extractTextContent(html) {
     return typeof html === "string"

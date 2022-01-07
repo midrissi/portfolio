@@ -39,7 +39,9 @@ export default function Greeting() {
               </p>
               <SocialMedia />
               <div className="button-greeting-div">
-                {contactInfo.display && <Button text="Contact me" href="#contact" />}
+                {contactInfo.display && (
+                  <Button text="Contact me" href="#contact" />
+                )}
                 {greeting.resumeLink && (
                   <Button
                     text="See my resume"

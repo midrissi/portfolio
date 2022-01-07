@@ -1,22 +1,19 @@
-import React, {useState, useEffect, useContext, Suspense, lazy} from "react";
-import "./Project.scss";
+import React, { lazy, Suspense, useContext, useState } from "react";
 import Button from "../../components/button/Button";
-import {openSource, socialMediaLinks} from "../../portfolio";
-import StyleContext from "../../contexts/StyleContext";
 import Loading from "../../containers/loading/Loading";
+import StyleContext from "../../contexts/StyleContext";
+import { openSource, socialMediaLinks } from "../../portfolio";
+import "./Project.scss";
 export default function Projects() {
   const GithubRepoCard = lazy(() =>
     import("../../components/githubRepoCard/GithubRepoCard")
   );
   const FailedLoading = () => null;
   const renderLoader = () => <Loading />;
-  const [repo, setrepo] = useState([]);
+  const [repo] = useState([]);
   // todo: remove useContex because is not supported
   const {isDark} = useContext(StyleContext);
 
-  function setrepoFunction(array) {
-    setrepo(array);
-  }
   if (
     !(typeof repo === "string" || repo instanceof String) &&
     openSource.display
