@@ -1,5 +1,5 @@
-import React, { lazy, Suspense, useState } from "react";
-import { openSource } from "../../portfolio";
+import React, {lazy, Suspense, useState} from "react";
+import {openSource} from "../../portfolio";
 import Contact from "../contact/Contact";
 import Loading from "../loading/Loading";
 

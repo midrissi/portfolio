@@ -1,8 +1,8 @@
-import React, { lazy, Suspense, useContext, useState } from "react";
+import React, {lazy, Suspense, useContext, useState} from "react";
 import Button from "../../components/button/Button";
 import Loading from "../../containers/loading/Loading";
 import StyleContext from "../../contexts/StyleContext";
-import { openSource, socialMediaLinks } from "../../portfolio";
+import {openSource, socialMediaLinks} from "../../portfolio";
 import "./Project.scss";
 export default function Projects() {
   const GithubRepoCard = lazy(() =>
